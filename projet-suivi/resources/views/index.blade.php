@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- head definitions go here -->
+    @vite(['resources/js/app.js', 'resources/css/app.css'])
     </head>
     <body>
        <h1>page d'accueil du site web</h1>
