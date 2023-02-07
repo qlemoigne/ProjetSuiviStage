@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-    @vite(['resources/js/app.js', 'resources/css/app.css'])
+    @vite(['resources/css/app.css'])
+    <script src='resources/js/app.js'></script>
     </head>
     <body>
        <h1>page d'accueil du site web</h1>
