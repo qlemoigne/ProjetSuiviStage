@@ -9,3 +9,4 @@ php artisan config:cache
 php artisan config:clear
 composer dump-autoload -o
 php artisan key:generate
+php artisan make:model Test
