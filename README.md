@@ -10,3 +10,6 @@ php artisan config:clear
 composer dump-autoload -o
 php artisan key:generate
 php artisan make:model Test
+
+créer une factory : php artisan make:factory 'nom du modele' --model='nom du modele'
+génerer 10 enregistrements aléatoires : App\Models\'nom du modele'::factory()->count(10)->create();  
