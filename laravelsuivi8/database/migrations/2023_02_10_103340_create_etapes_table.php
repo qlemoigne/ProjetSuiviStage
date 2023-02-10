@@ -17,6 +17,7 @@ class CreateEtapesTable extends Migration
             $table->id();
             $table->string('libelle');
             $table->integer('echeance');
+            $table->timestamps();
         });
     }
 

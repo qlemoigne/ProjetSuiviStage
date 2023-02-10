@@ -19,6 +19,7 @@ class CreateActivitesTable extends Migration
             $table->date('fin');
             $table->string('adresse');
             $table->string('numero tuteur externe');
+            $table->timestamps();
         });
     }
 
