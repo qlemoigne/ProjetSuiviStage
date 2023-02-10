@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTypesTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
-            $table->id();
-            $table->string('libelle');
-            $table->timestamps();
+        Schema::create('password_resets', function (Blueprint $table) {
+            $table->string('email')->primary();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -27,6 +27,6 @@ class CreateTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('password_resets');
     }
-}
+};
