@@ -14,10 +14,17 @@ class CreateTypesTable extends Migration
     public function up()
     {
         Schema::create('types', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->id();
             $table->string('libelle');
             $table->timestamps();
         });
+
+        Schema::table('activites', function (Blueprint $table) {
+            $table->unsignedBigInteger('types_id');
+          $table->foreign('types_id')->references('id')->on('types');
+        });
+
     }
 
     /**
