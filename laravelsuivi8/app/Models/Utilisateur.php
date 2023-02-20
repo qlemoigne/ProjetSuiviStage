@@ -9,7 +9,7 @@ class Utilisateur extends Model
 {
     public function activites()
     {
-        return $this->belongsToMany(Activite::class);
+        return $this->belongsToMany(Activite::class,'participation','utilisateurs_id','activites_id');
     }
     use HasFactory;
 }

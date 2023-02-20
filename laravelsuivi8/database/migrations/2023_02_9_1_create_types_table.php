@@ -22,12 +22,12 @@ class CreateTypesTable extends Migration
 
         Schema::table('activites', function (Blueprint $table) {
             $table->unsignedBigInteger('types_id');
-          $table->foreign('types_id')->references('id')->on('types');
+            $table->foreign('types_id')->references('id')->on('types');
         });
 
         Schema::table('etapes', function (Blueprint $table) {
             $table->unsignedBigInteger('types_id');
-          $table->foreign('types_id')->references('id')->on('types');
+            $table->foreign('types_id')->references('id')->on('types');
         });
 
     }
