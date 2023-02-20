@@ -1,1 +1,1 @@
-window.alert("uwu")
+window.alert("hello world")

@@ -19,7 +19,7 @@ class CreateUtilisateursTable extends Migration
             $table->string('prenom');
             $table->string('telephone');
             $table->string('mail');
-            $table->string('status');
+            $table->string('profil');
             $table->timestamps();
 
         });
