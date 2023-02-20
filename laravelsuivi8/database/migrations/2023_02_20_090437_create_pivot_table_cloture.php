@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePivotTableParticipation extends Migration
+class CreatePivotTableCloture extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreatePivotTableParticipation extends Migration
      */
     public function up()
     {
-        Schema::create('participation', function (Blueprint $table) {
+        Schema::create('cloture', function (Blueprint $table) {
             $table->id();
+            $table->string('appreciation-eleve');
+            $table->string('appreciation-tuteur');
+            $table->string('fichier-notation');
             $table->timestamps();
         });
 
-        Schema::table('participation', function (Blueprint $table) {
+        Schema::table('cloture', function (Blueprint $table) {
             $table->unsignedBigInteger('utilisateurs_id');
             $table->foreign('utilisateurs_id')->references('id')->on('utilisateurs')->onDelete('cascade');
             $table->unsignedBigInteger('activites_id');
@@ -33,6 +36,6 @@ class CreatePivotTableParticipation extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('participation');
+        Schema::dropIfExists('pivot_table_cloture');
     }
 }
