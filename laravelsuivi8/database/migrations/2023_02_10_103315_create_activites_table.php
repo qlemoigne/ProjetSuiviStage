@@ -27,7 +27,6 @@ class CreateActivitesTable extends Migration
           //$table->foreign('types_id')->references('id')->on('types');
         });
 
-       
     }
 
     /**

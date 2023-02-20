@@ -23,6 +23,8 @@ class CreateUtilisateursTable extends Migration
             $table->timestamps();
 
         });
+
+        
     }
 
     /**
