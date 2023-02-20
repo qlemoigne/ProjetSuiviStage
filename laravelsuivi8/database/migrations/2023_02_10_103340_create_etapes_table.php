@@ -19,6 +19,11 @@ class CreateEtapesTable extends Migration
             $table->integer('echeance');
             $table->timestamps();
         });
+
+        Schema::table('etapes', function (Blueprint $table) {
+            $table->unsignedBigInteger('etapes_id');
+          $table->foreign('etapes_id')->references('id')->on('etapes');
+        });
     }
 
     /**
