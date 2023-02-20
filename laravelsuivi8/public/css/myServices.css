@@ -1,0 +1,417 @@
+/*En vert, pour les tests*/
+[class*="col-"], footer {
+font-size:13px;
+/*background-color: lightgreen;
+border: 1px solid black;*/
+}
+
+.header-large, .header-large-test{
+  height: 150px;
+  background: url('../images/banner.png') no-repeat;
+  font-size: 290%;
+  font-weight: bold;
+  /* color:#00B8DE; */
+  color:white;
+  align-content: center;
+  width: 97%;
+  margin-left: 17px;
+}
+
+.header-large-test{
+  background: url('../images/banner-test.png') no-repeat;
+}
+
+.header-small {
+  /*height: 180px;*/
+  /*background: url('../images/banner-s.png') no-repeat;*/
+  font-weight: bold;
+  color:#00B8DE;
+	margin-bottom:20px;
+	font-size: 200%;
+ }
+
+/* .container{ max-width: 960px; } */
+.container{ max-width: 1203px !important; }
+/*.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg{width:100%}*/
+/* .logo-l{width:204px;height:120px;background-image: url(../images/logo.png);position:absolute;top:45px;} */
+.text-banner-l{position:absolute; top:45px; left:45%;}
+.text-banner-l-2lignes{position:absolute; top:90px; left:50%;}
+.logo-s{width:170px;height:100px;background-image: url(../images/logo-s.png);position:absolute;top:45px;left:15px;}
+.text-banner-s{position:absolute; top:70px; left:260px;}
+
+.logo {
+	margin: 25px 0px 0px 30px;
+	border: none;
+	margin: 35px 0px 0px 210px;
+}
+
+body {
+	margin:0px; padding:0px;
+}
+
+/*Menu*/
+.navbar-brand {
+	padding: 15px;
+}
+
+.navbar-brand>img {
+	height: 100%;
+	padding: 0px;
+	width: auto;
+}
+
+.navbar-right{
+  margin-right: -16px !important;
+}
+
+.titre-page{
+  margin-bottom: 20px;
+	color: #777;
+	text-align: left;
+  font-size: 22px;
+}
+
+.titre-section{
+  margin-bottom: 10px;
+	color: #777;
+	text-align: left;
+  font-size: 18px;
+}
+
+.titre-central{
+  font-weight: bold;
+  margin-bottom: 10px;
+	color: #777;
+	text-align: center;
+  font-size: 18px;
+}
+
+/* texte gras */
+.nom-info{
+	font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* texte gras aligné à droite avec une marge pour être aligné avec espace des champs*/
+.nom-champs{
+	font-weight: bold;
+  margin-top: 1%;
+  margin-bottom: 20px;
+}
+
+.nom-champs-info{
+	font-weight: bold;
+  margin-top: 1%;
+}
+
+.nom-champs-txt{
+	font-weight: bold;
+}
+
+.valeur-champs{
+  margin-top: 1%;
+}
+
+/* texte gras aligné à droite en grand écran */
+.nom-champs-xs{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+/* texte gras aligné à droite en petit écran */
+.nom-champs-sm{
+    text-align: right;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+.barre{
+	text-decoration : line-through;
+	color: #999999;
+}
+
+/* lien bleu gras*/
+.lien{
+  /* font-weight: bold; */
+  margin-bottom: 20px;
+  color:#337ab7;
+}
+
+.lien-important{
+  font-size: 16px;
+  margin-bottom: 20px;
+  color:#337ab7;
+}
+
+.glyphicon{
+	right:3px;
+}
+
+.glyphicon-chevron-right, .glyphicon-chevron-left{
+  color:#337ab7;
+}
+
+.glyphicon-warning-ok{
+	color:green;
+}
+
+.glyphicon-warning-error{
+	color:red;
+}
+
+.glyphicon-warning-warning{
+	color:#FBB607;
+}
+
+
+table.dataTable.no-footer{
+  border-bottom: 1px solid #111 !important;
+}
+
+/*Lignes verrouillées dans historique en vert*/
+.ligne-verouillee{
+	color: #096A09;
+	font-style: italic;
+}
+
+/*Lignes refusées ou annulées dans historique en rouge et italique*/
+.ligne-refusee-annulee{
+	color: #879A97;
+	font-style: italic;
+	border-collapse: separate;
+}
+
+/* utilisée pour griser les lignes comme le samedi et dimanche*/
+.ligne-week-end{
+	background-color: #ffffff !important;
+}
+
+.paire{
+  background-color: #efefef !important;
+}
+
+.impaire{
+  background-color: #e3e3e3 !important;
+}
+
+.ligne{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 0;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: 0px;
+  border-top: 1px solid #eee;
+}
+
+tr {
+  cursor: pointer;
+}
+
+.text-right-sm {
+    text-align: inherit;
+}
+
+/* Style par défaut */
+.text-center-xs {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+  .text-right-sm {
+    text-align: right;
+  }
+
+  .text-left-sm {
+      text-align: left;
+  }
+}
+
+.form-group {
+  margin-bottom: 0px;
+}
+
+.form-group-slide {
+  margin-top: 10px;
+}
+
+.action{
+	padding-right: 1%;
+  padding-top: 1%;
+  border-top: 1px solid black;
+}
+
+/* fenetres modal*/
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.small-button{
+  margin-top : 10%;
+}
+/* Fin fenêtre modal*/
+
+/*Interrupteur*/
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 27px;
+}
+
+.switch input {
+  display:none;
+}
+
+.slider,.sliderDiff {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.sliderDiff{
+  border-top : 10px;
+  background-color: #ccc;
+}
+
+.slider:before, .sliderDiff:before {
+	position: absolute;
+	content: "";
+	height: 20px;
+	width: 20px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+/* Configuration des couleurs de switch dans les css des applis*/
+input:checked + .slider, input:checked + .sliderDiff {
+	background-color: #2196F3;
+}
+
+input:focus + .slider, input:focus + .sliderDiff {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before, input:checked + .sliderDiff:before {
+	-webkit-transform: translateX(40px);
+	-ms-transform: translateX(40px);
+	transform: translateX(40px);
+}
+
+/* Rounded sliders */
+.slider.round, .sliderDiff.round {
+	border-radius: 34px;
+}
+
+.slider.round:before, .sliderDiff.round:before {
+	border-radius: 50%;
+}
+/* fin interrupteur*/
+
+/*Autocomplétion*/
+.typeahead, .tt-query, .tt-hint {
+	/*border: 2px solid #CCCCCC;
+	border-radius: 8px;
+	font-size: 10px;
+	height: 30px;
+	line-height: 30px;
+	outline: medium none;
+	padding: 8px 12px;
+	width: 100%;*/
+	font-size: inherit;
+	height: 30px;
+	line-height: 30px;
+	outline: medium none;
+	padding: 8px 12px;
+	width: 100%;
+}
+
+.twitter-typeahead {
+	display: block !important;
+}
+
+.typeahead {
+	background-color: #FFFFFF;
+}
+
+.tt-query {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+	color: #999999;
+}
+.tt-menu {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 12px;
+	padding: 8px 0;
+}
+.tt-suggestion {
+	padding: 3px 20px;
+}
+.tt-suggestion:hover {
+	cursor: pointer;
+	background-color: #0097CF;
+	color: #FFFFFF;
+}
+.tt-suggestion p {
+	margin: 0;
+}
+
+.information{
+  text-align: justify;
+  margin-top: 1%;
+}
+
+.button{
+  margin-top : 3%;
+}
+
+.photo {
+	width: 70%;
+	float: right;
+}
+
+/*espace après une ligne*/
+.interligne{
+  margin-bottom: 2%;
+}
+
+/*espace après une ligne*/
+.double-interligne{
+  margin-bottom: 5%;
+}
+
+/* Fin Autocomplétion */
+
+footer {
+	padding-top: 45px;
+  text-align: center;
+	font-style: italic;
+}
