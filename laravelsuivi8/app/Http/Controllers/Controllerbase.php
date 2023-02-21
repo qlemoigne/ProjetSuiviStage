@@ -12,9 +12,12 @@ class Controllerbase extends SuiviController
         //$error = IdentificationHelper::identification($this->appli);
         if (empty($error)){
             $activites = Activite::all();
+            $utilisateur = Utilisateur::find(2);
             $utilisateurs = Utilisateur::all();
+            $utilisateurs = $utilisateurs->where('id','!=',$utilisateur->id);
+            
             echo session('MAIL');
-            return view('index', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs]);
+            return view('index', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs, 'utilisateur'=>$utilisateur]);
         }
         else{
             return view('error', ['menus' => $this->getMenus(), 'message' => $error]);

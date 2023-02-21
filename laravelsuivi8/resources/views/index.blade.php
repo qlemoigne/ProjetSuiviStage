@@ -9,10 +9,16 @@
         </div>
     </div>
 
-
-       @foreach($utilisateurs as $u )
-            @foreach($u->activites as $activite)
-            <h2> {{$activite->adresse}}</h2>
+            @foreach($utilisateur->activites as $activite)
+            <h2> {{$activite->types->libelle}} <br>
+                 {{$activite->debut}} - 
+                 {{$activite->fin}}
+            </h2>
+            @foreach($activite->utilisateurs as $u)
+            @if($u->id != $utilisateur->id) 
+            <h2>{{$u->prenom}}  {{$u->nom}}</h2>
+            @endif 
             @endforeach
-        @endforeach
+
+            @endforeach
 @endsection
