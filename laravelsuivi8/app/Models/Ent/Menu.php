@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-  protected $connection = 'ent';
+  protected $connection = 'suivi';
   protected $table = 'menu';
   protected $primaryKey = 'id_menu';
   public $incrementing = false; // Indique si les ID sont auto-incrémentés

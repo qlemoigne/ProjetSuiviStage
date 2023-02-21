@@ -17,7 +17,7 @@ class UtilisateurSeeder extends Seeder
                 'lib_nom' => 'Fabresse',
                 'lib_prenom' => 'Isabelle',
                 'id_type_utilisateur' => 2,
-                'lib_adr_mail' => 'isabelle.fabresse@imt-nord-europe.fr',
+                'lib_adr_mail' => 'isabelle.fabresse@imt-lille-douai.fr',
             ]
         ]);
     }
