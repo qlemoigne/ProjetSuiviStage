@@ -9,7 +9,7 @@ use App\Models\Utilisateur;
 class Controllerbase extends SuiviController
 {
     public function index(){
-        $error = IdentificationHelper::identification($this->appli);
+        //$error = IdentificationHelper::identification($this->appli);
         if (empty($error)){
             $activites = Activite::all();
             $utilisateurs = Utilisateur::all();
