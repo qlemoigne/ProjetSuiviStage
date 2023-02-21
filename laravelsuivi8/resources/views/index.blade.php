@@ -8,7 +8,7 @@
         page d'accueil du site web
         </div>
     </div>
-
+    <div>
             @foreach($utilisateur->activites as $activite)
             <h2> {{$activite->types->libelle}} <br>
                  {{$activite->debut}} - 
@@ -21,4 +21,5 @@
             @endforeach
 
             @endforeach
+    </div>
 @endsection
