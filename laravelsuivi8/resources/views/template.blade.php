@@ -64,7 +64,7 @@ if ($dbType == 'development') {
                 Accueil
               </li>
               <li id="bouton_historique">
-                historique
+                Historique
               </li>
                 <?php
 

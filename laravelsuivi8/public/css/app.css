@@ -16,3 +16,8 @@ td, th{
         margin-top:15px;
         margin-right: 25px;
 }
+
+.navbar-left>li:hover{
+        cursor:pointer;
+        color:black
+}
