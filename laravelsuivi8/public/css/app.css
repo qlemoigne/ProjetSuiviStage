@@ -1,0 +1,13 @@
+table{
+        border-bottom: solid black;
+        border-top: solid black;
+}
+
+.odd {
+        background-color: rgb(216, 214, 214);
+        
+
+}
+td, th{
+        padding: 20px; 
+}

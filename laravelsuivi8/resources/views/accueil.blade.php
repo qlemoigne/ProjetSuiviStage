@@ -5,21 +5,33 @@
 
     <div class="row">
         <div class="col-xs-12 titre-page">
-        page d'accueil du site web
+        Liste des activités
         </div>
     </div>
+    <table>
+    <thead>
+    <tr>
+      <th scope="col">Type d'activité</th>
+      <th scope="col">Début de l'activité</th>
+      <th scope="col">Fin de l'activité</th>
+      <th scope="col">Nom  </th>
+      <th scope="col">Prenom  </th>
+    </tr>
+  </thead>
             @foreach($utilisateur->activites as $activite)
-            <div class="event">
-            <h2> {{$activite->types->libelle}} <br>
-                 {{$activite->debut}} - 
-                 {{$activite->fin}}
-            </h2>
+            <tr class="odd"> 
+                <td id="act">{{$activite->types->libelle}}</td>
+                <td>{{$activite->debut}} </td>
+                <td>{{$activite->fin}}</td>
                 @foreach($activite->utilisateurs as $u)
                     @if($u->id != $utilisateur->id) 
-                        <h2>{{$u->prenom}}  {{$u->nom}}</h2>
+                    <td> {{$u->prenom}}  </td>
+                    <td> {{$u->nom}} </td>
                      @endif 
                 @endforeach
-            </div>
+            </tr>   
+
             @endforeach
+    </table>
 
 @endsection

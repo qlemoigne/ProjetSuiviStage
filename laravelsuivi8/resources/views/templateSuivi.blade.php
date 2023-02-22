@@ -6,7 +6,7 @@
 @extends('template')
 
 @section('style')
-  <link rel="stylesheet" type="text/css" href="{{asset('css/itv3/itv3.css')}}" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}" media="screen"/>
   @yield('styleSuivi')
 @endsection
 
