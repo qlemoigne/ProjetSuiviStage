@@ -11,3 +11,8 @@ table{
 td, th{
         padding: 20px; 
 }
+
+.navbar-left > li{
+        margin-top:15px;
+        margin-right: 25px;
+}
