@@ -12,7 +12,7 @@ class Controllerbase extends SuiviController
         //$error = IdentificationHelper::identification($this->appli);
         if (empty($error)){
             $activites = Activite::all();
-            $utilisateur = Utilisateur::find(2);
+            $utilisateur = Utilisateur::find(1);
             $utilisateurs = Utilisateur::all();
             $utilisateurs = $utilisateurs->where('id','!=',$utilisateur->id);
             

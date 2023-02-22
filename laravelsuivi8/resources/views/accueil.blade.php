@@ -13,6 +13,7 @@
             <h2> {{$activite->types->libelle}} <br>
                  {{$activite->debut}} - 
                  {{$activite->fin}}
+                 
             </h2>
             @foreach($activite->utilisateurs as $u)
             @if($u->id != $utilisateur->id) 
