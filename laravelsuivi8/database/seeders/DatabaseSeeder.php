@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,9 +15,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // ENT
-        $this->call('ApplicationSeeder');
-        $this->call('TypeUtilisateurSeeder');
-        $this->call('MenuSeeder');
+        $this->call([
+            ApplicationSeeder::class,
+            MenuSeeder::class,
+            TypeUtilisateurSeeder::class,
+            UtilisateurSeeder::class,
+        ]);
         
     }
 }

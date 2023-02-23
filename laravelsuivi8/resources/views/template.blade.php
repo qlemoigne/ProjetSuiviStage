@@ -60,12 +60,6 @@ if ($dbType == 'development') {
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-left" id="myTab">
-              <li id="bouton_accueil">
-                Accueil
-              </li>
-              <li id="bouton_historique">
-                Historique
-              </li>
                 <?php
 
                 function echoBeginningOfMenu($menu){

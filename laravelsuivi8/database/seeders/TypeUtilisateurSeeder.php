@@ -1,7 +1,8 @@
 <?php
+namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class TypeUtilisateurSeeder extends Seeder
 {
     /**
@@ -9,9 +10,11 @@ class TypeUtilisateurSeeder extends Seeder
      *
      * @return void
      */
+    protected $connection = 'ent';
     public function run()
     {
-        DB::table('type_utilisateur')->insert([
+        
+        DB::connection('ent')->table('type_utilisateur')->insert([
             [
                 'id_type_utilisateur' => 1,
                 'lib_type_utilisateur' => 'Etudiant'
