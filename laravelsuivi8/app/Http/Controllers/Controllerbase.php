@@ -17,7 +17,8 @@ class Controllerbase extends SuiviController
             $utilisateurs = $utilisateurs->where('id','!=',$utilisateur->id);
             
             echo session('MAIL');
-            return view('accueil', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs, 'utilisateur'=>$utilisateur]);
+            //return view('accueil', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs, 'utilisateur'=>$utilisateur]);
+            return view('event');
         }
         else{
             return view('error', ['menus' => $this->getMenus(), 'message' => $error]);
