@@ -83,7 +83,7 @@ class IdentificationHelper{
       $error = "Impossible de récupérer le compte associé au mail " . $mail . ".";
     }
     else {
-      $idUtilisateur = $user['ID_UTILISATEUR'];
+      $idUtilisateur = $user['id_utilisateur'];
       
       // On met les infos dans une session
       Session::put("MAIL", $mail);

@@ -14,7 +14,8 @@ class ApplicationSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('application')->insert([
+      
+        DB::connection('ent')->table('application')->insert([
             [
                 'id_application' => 41,
                 'lib_application' => 'Mon Profil',
@@ -27,5 +28,11 @@ class ApplicationSeeder extends Seeder
             ],
             
         ]);
+        
+
+        
+
+        
+        
     }
 }

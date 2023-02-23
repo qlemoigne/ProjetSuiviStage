@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MenuSeeder extends Seeder
 {
@@ -11,17 +12,24 @@ class MenuSeeder extends Seeder
      *
      * @return void
      */
+    protected $connection = 'ent';
     public function run()
     {
-        DB::table('menu')->insert([
-            /*  [
-                 'id_application' => 1,
-                 'lib_titre' => 'GestionPersonnel',
-                 'lib_route' => 'listePersonnel',
-                 'ordre' => 1
-             ], */
+        DB::connection('ent')->table('menu')->insert([
+            [
+               'id_application' => 4,
+               'lib_titre' => 'Acceuil',
+               'lib_route' => '/',
+               'ordre' => 1,
+           ], 
+           [
+              'id_application' => 4,
+              'lib_titre' => 'Historique',
+              'lib_route' => '/',
+              'ordre' => 2,
+          ], 
 
-            
-         ]);
+          
+       ]);
     }
 }

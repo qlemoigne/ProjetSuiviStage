@@ -8,7 +8,7 @@ class DroitUtilisateur extends Model
 {
 	use \App\Models\Traits\HasCompositePrimaryKey;
 
-  protected $connection = 'suivi';
+  protected $connection = 'ent';
   protected $table = 'droit_utilisateur';
 	protected $primaryKey = array('ID_APPLICATION', 'ID_UTILISATEUR', 'COD_DROIT');
 	protected $keyType = array('int', 'int', 'int');

@@ -23,12 +23,14 @@
                 <td id="act">{{$activite->types->libelle}}</td>
                 <td>{{$activite->debut}} </td>
                 <td>{{$activite->fin}}</td>
+                <td>
                 @foreach($activite->utilisateurs as $u)
                     @if($u->id != $utilisateur->id) 
-                    <td> {{$u->prenom}}  </td>
-                    <td> {{$u->nom}} </td>
+                     {{$u->prenom}}  
+                    {{$u->nom}}
                      @endif 
                 @endforeach
+                </td>
             </tr>   
 
             @endforeach

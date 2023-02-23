@@ -1,6 +1,9 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class UtilisateurSeeder extends Seeder
 {
@@ -9,9 +12,10 @@ class UtilisateurSeeder extends Seeder
      *
      * @return void
      */
+    protected $connection = 'ent';
     public function run()
     {
-        DB::table('utilisateur')->insert([
+        DB::connection('ent')->table('utilisateur')->insert([
             [
                 'id_utilisateur' => 3,
                 'lib_nom' => 'Fabresse',

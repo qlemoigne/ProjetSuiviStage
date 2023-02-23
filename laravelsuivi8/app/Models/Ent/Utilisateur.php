@@ -11,7 +11,7 @@ use Session;
 
 class Utilisateur extends Model
 {
-  protected $connection = 'suivi';
+  protected $connection = 'ent';
   protected $table = 'utilisateur';
   protected $primaryKey = 'id_utilisateur';
 
