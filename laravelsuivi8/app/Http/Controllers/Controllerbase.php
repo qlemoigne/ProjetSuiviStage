@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helpers\IdentificationHelper;
 use App\Models\Activite;
 use App\Models\Utilisateur;
+use App\Models\Etape;
 
 class Controllerbase extends SuiviController
 {
@@ -25,8 +26,9 @@ class Controllerbase extends SuiviController
         }
     }
     public function activite($id){
-        $activite = Activite::find(1);
-        return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite]);
+        $activite = Activite::find($id);
+        $etapes = Etape::all()->where('types_id','=',$activite->types_id);
+        return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite, 'etapes'=> $etapes]);
     }
     
 }
