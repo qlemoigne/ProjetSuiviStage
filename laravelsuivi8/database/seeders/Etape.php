@@ -14,7 +14,8 @@ class Etape extends Seeder
      */
     public function run()
     {
-        DB::table('etapes')->insert([
+        DB::table('etapes')->insert([[
+
            'id'=> 1,
             'libelle'=>'appel tuteur',
             'echeance'=>30,
@@ -28,6 +29,7 @@ class Etape extends Seeder
             'echeance'=>60,
             'types_id'=>1,  
             'etapes_id'=>1, 
-        ]);
+        ]
+    ]);
     }
 }

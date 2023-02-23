@@ -18,15 +18,15 @@ class Controllerbase extends SuiviController
             $activite = Activite::find(1);
             
             echo session('MAIL');
-            //return view('accueil', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs, 'utilisateur'=>$utilisateur]);
-            return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite]);
+            return view('accueil', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs, 'utilisateur'=>$utilisateur]);
         }
         else{
             return view('error', ['menus' => $this->getMenus(), 'message' => $error]);
         }
     }
-    public function activite($id_activite){
-        return view('event', ['menus' => $this->getMenus(), 'id_activite'=> $id_activite]);
+    public function activite($id){
+        $activite = Activite::find(1);
+        return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite]);
     }
     
 }

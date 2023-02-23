@@ -14,7 +14,7 @@ class Participe extends Seeder
      */
     public function run()
     {
-        DB::table('participation')->insert([
+        DB::table('participation')->insert([[
            'id'=> 1,
             'utilisateurs_id'=>1,
             'activites_id'=>1,
@@ -23,7 +23,8 @@ class Participe extends Seeder
             'id'=> 2,
              'utilisateurs_id'=>2,
              'activites_id'=>1,
-         ]);
+         ]
+        ]);
        
     }
 }
