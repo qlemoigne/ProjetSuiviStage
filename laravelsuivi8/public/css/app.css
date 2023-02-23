@@ -17,7 +17,6 @@ td, th{
         margin-right: 25px;
 }
 
-.navbar-left>li:hover{
-        cursor:pointer;
-        color:black
+.h-8{
+        margin-right:5px;
 }
