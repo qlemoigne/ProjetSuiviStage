@@ -25,5 +25,8 @@ class Controllerbase extends SuiviController
             return view('error', ['menus' => $this->getMenus(), 'message' => $error]);
         }
     }
+    public function activite($id_activite){
+        return view('event', ['menus' => $this->getMenus(), 'id_activite'=> $id_activite]);
+    }
     
 }

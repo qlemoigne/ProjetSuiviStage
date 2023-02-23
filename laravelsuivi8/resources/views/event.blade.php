@@ -2,25 +2,15 @@
 
 
 @section('content')
+<div id="titre_activite"> {{$activite->resume}} </div>
 <div class="timeline">
+    @foreach($activites->types->types as $jalon)
     <x-bladewind.timeline
         date="18-JUL"
-        label="You signed up"
+        label= {{$jalon->libelle}}
         status="completed"
     />
-
-    <x-bladewind.timeline
-        date="19-JUL"
-        label="I signed up"
-        status="completed"
-    />
-
-    <x-bladewind.timeline
-        date="19-JUL"
-        label="I signed up"
-        status="pending"
-        color="red"
-    />
+    @endforeach
 
 </div>
 

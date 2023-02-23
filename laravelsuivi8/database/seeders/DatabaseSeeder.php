@@ -20,6 +20,11 @@ class DatabaseSeeder extends Seeder
             MenuSeeder::class,
             TypeUtilisateurSeeder::class,
             UtilisateurSeeder::class,
+            Activite::class,
+            Etape::class,
+            Participe::class,
+            Type::class,
+            Utilisateur::class,
         ]);
         
     }
