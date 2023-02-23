@@ -14,7 +14,7 @@ class Utilisateur extends Seeder
      */
     public function run()
     {
-        DB::table('utilisateurs')->insert([
+        DB::table('utilisateurs')->insert([[
            'id'=> 1,
             'nom'=>'bukielski',
             'prenom'=>'Robin',
@@ -30,7 +30,8 @@ class Utilisateur extends Seeder
             'telephone'=>'0782051968',
             'mail'=>'seneclauzebaptiste@gmail.com',
             'profil'=>'1',
-        ]);
+        ]
+    ]);
     }
 }
 
