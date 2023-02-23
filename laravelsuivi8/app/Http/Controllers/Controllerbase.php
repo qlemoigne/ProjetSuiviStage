@@ -15,10 +15,11 @@ class Controllerbase extends SuiviController
             $utilisateur = Utilisateur::find(1);
             $utilisateurs = Utilisateur::all();
             $utilisateurs = $utilisateurs->where('id','!=',$utilisateur->id);
+            $activite = Activite::find(1);
             
             echo session('MAIL');
             //return view('accueil', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs, 'utilisateur'=>$utilisateur]);
-            return view('event');
+            return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite]);
         }
         else{
             return view('error', ['menus' => $this->getMenus(), 'message' => $error]);
