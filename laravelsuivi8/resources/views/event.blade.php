@@ -4,14 +4,13 @@
 @section('content')
 <div id="titre_activite"> {{$activite->resume}} </div>
 <div class="timeline">
-    @foreach($activites->types->types as $jalon)
+    @foreach($etapes as $jalon)
     <x-bladewind.timeline
-        date="18-JUL"
-        label= {{$jalon->libelle}}
-        status="completed"
-    />
+    date="18-JUL"
+    label='{{$jalon->libelle}}'
+    status="completed"
+    stacked="true" />
     @endforeach
-
 </div>
 
 @endsection

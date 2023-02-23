@@ -15,12 +15,13 @@
       <th scope="col">Début de l'activité</th>
       <th scope="col">Fin de l'activité</th>
       <th scope="col">Nom  </th>
-      <th scope="col">Prenom  </th>
     </tr>
   </thead>
             @foreach($utilisateur->activites as $activite)
+           
             <tr class="odd"> 
-                <td id="act">{{$activite->types->libelle}}</td>
+             
+                <td id="act"> <a href=" {{ route('activite', ['id'=> $activite->id]) }}">{{$activite->types->libelle}}</td>
                 <td>{{$activite->debut}} </td>
                 <td>{{$activite->fin}}</td>
                 <td>
@@ -30,6 +31,7 @@
                     {{$u->nom}}
                      @endif 
                 @endforeach
+</a>
                 </td>
             </tr>   
 
