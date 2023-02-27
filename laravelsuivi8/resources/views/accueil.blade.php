@@ -8,7 +8,7 @@
         Liste des activités
         </div>
     </div>
-    <table>
+    <table id="table_accueil">
     <thead>
     <tr>
       <th scope="col">Type d'activité</th>

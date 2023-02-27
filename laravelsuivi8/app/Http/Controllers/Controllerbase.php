@@ -28,7 +28,8 @@ class Controllerbase extends SuiviController
     public function activite($id){
         $activite = Activite::find($id);
         $etapes = Etape::all()->where('types_id','=',$activite->types_id);
-        return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite, 'etapes'=> $etapes]);
+        $date=$activite->debut;
+        return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite, 'etapes'=> $etapes, 'date'=> $date]);
     }
     
 }
