@@ -16,15 +16,16 @@ class DatabaseSeeder extends Seeder
     {
         // ENT
         $this->call([
+            Type::class,
+            Utilisateur::class,
+            Etape::class,
+            Activite::class,
+            Participe::class,
             ApplicationSeeder::class,
             MenuSeeder::class,
             TypeUtilisateurSeeder::class,
             UtilisateurSeeder::class,
-            Activite::class,
-            Etape::class,
-            Participe::class,
-            Type::class,
-            Utilisateur::class,
+           
         ]);
         
     }
