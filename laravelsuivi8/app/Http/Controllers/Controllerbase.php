@@ -17,8 +17,7 @@ class Controllerbase extends SuiviController
             $utilisateurs = Utilisateur::all();
             $utilisateurs = $utilisateurs->where('id','!=',$utilisateur->id);
             $activite = Activite::find(1);
-            
-            echo session('MAIL');
+        
             return view('accueil', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs, 'utilisateur'=>$utilisateur]);
         }
         else{
