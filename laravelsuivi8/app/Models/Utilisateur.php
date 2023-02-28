@@ -11,5 +11,9 @@ class Utilisateur extends Model
     {
         return $this->belongsToMany(Activite::class,'participation','utilisateurs_id','activites_id');
     }
+
+    public function etape(){
+        return $this->hasMany(Etape::class,'validation','utilisateurs_id','etapes_id');
+    }
     use HasFactory;
 }
