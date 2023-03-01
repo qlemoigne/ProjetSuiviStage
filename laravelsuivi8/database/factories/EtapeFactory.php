@@ -16,6 +16,7 @@ class EtapeFactory extends Factory
         return [
             'libelle' => $this->faker->text,
             'echeance' => $this->faker->randomDigit,
+            'importance' => $this->faker->boolean
             //
         ];
     }

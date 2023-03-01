@@ -19,6 +19,7 @@ class Etape extends Seeder
            'id'=> 1,
             'libelle'=>'appel tuteur',
             'echeance'=>30,
+            'importance' => true,
             'types_id'=>1,
             'etapes_id'=>1,
 
@@ -27,6 +28,7 @@ class Etape extends Seeder
             'id'=> 2,
             'libelle'=>'notation rapport',
             'echeance'=>60,
+            'importance' => false,
             'types_id'=>1,  
             'etapes_id'=>1, 
         ]

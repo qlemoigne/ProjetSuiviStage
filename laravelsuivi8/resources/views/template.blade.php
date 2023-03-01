@@ -196,7 +196,7 @@ if ($dbType == 'development') {
   </footer>
 
   <!-- Scripts -->
-  <script type="text/javascript" src="{{asset('assets/js/jquery.min.js')}}"></script>F
+  <script type="text/javascript" src="{{asset('assets/js/jquery.min.js')}}"></script>
   <script type="text/javascript" src="{{asset('assets/popper/popper.js')}}"></script>
   <script type="text/javascript" src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}"></script>
   <script type="text/javascript" src="{{asset('assets/bootstrap-datatables/media/js/jquery.dataTables.min.js')}}"></script>

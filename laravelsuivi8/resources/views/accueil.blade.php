@@ -18,22 +18,22 @@
     </tr>
   </thead>
             @foreach($utilisateur->activites as $activite)
+            
            
-            <tr class="odd"> 
+            <tr onclick="window.location.assign('{{ route('activite', ['id'=> $activite->id]) }}');"> 
              
-                <td id="act"> <a href=" {{ route('activite', ['id'=> $activite->id]) }}">{{$activite->types->libelle}}</td>
+                <td>{{$activite->types->libelle}}</td>
                 <td>{{$activite->debut}} </td>
                 <td>{{$activite->fin}}</td>
                 <td>
                 @foreach($activite->utilisateurs as $u)
                     @if($u->id != $utilisateur->id) 
-                     {{$u->prenom}}  
+                    {{$u->prenom}}  
                     {{$u->nom}}
                      @endif 
                 @endforeach
-</a>
                 </td>
-            </tr>   
+            </tr>
 
             @endforeach
     </table>
