@@ -20,7 +20,9 @@ class Activite extends Seeder
             'fin'=>'2024-05-11',
             'adresse_stage'=>'185 rue léon blum',
             'numero_tuteur_externe'=>'07850556541',
-            'resume'=>'stage de L1',
+            'adresse_mail_tuteur_externe'=>'jean.dupont@gmail.com',
+            'nom_tuteur_externe'=>'jean dupont',
+            'thematique'=>'stage de L1',
             'types_id'=>1,
 
         ]);

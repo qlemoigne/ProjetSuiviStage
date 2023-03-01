@@ -12,9 +12,12 @@
     <thead>
     <tr>
       <th scope="col">Type d'activité</th>
+      <th scope="col">Nom de l'étudiant  </th>
+      <th scope="col">Thématique</th>
+      <th scope="col">Nom du tuteur  </th>
       <th scope="col">Début de l'activité</th>
       <th scope="col">Fin de l'activité</th>
-      <th scope="col">Nom  </th>
+
     </tr>
   </thead>
             @foreach($utilisateur->activites as $activite)
@@ -26,7 +29,9 @@
                 <td>{{$activite->debut}} </td>
                 <td>{{$activite->fin}}</td>
                 <td>
+                
                 @foreach($activite->utilisateurs as $u)
+              
                     @if($u->id != $utilisateur->id) 
                     {{$u->prenom}}  
                     {{$u->nom}}

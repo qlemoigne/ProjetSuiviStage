@@ -6,6 +6,7 @@ use App\Helpers\IdentificationHelper;
 use App\Models\Activite;
 use App\Models\Utilisateur;
 use App\Models\Etape;
+use App\Models\Validation;
 
 class Controllerbase extends SuiviController
 {
@@ -17,8 +18,7 @@ class Controllerbase extends SuiviController
             $utilisateurs = Utilisateur::all();
             $utilisateurs = $utilisateurs->where('id','!=',$utilisateur->id);
             $activite = Activite::find(1);
-            
-            echo session('MAIL');
+        
             return view('accueil', ['menus' => $this->getMenus(), 'activites'=> $activites, 'utilisateurs'=>$utilisateurs, 'utilisateur'=>$utilisateur]);
         }
         else{
@@ -26,10 +26,12 @@ class Controllerbase extends SuiviController
         }
     }
     public function activite($id){
+        $utilisateur = Utilisateur::find(1);
         $activite = Activite::find($id);
         $etapes = Etape::all()->where('types_id','=',$activite->types_id);
         $date=$activite->debut;
-        return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite, 'etapes'=> $etapes, 'date'=> $date]);
+        $validation = Validation::all()->where('utilisateurs_id','=',$utilisateur->id)->where('activites_id',"=",$activite->id);
+        return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite, 'etapes'=> $etapes, 'date'=> $date, 'validation'=>$validation]);
     }
     
 }

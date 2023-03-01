@@ -1,5 +1,5 @@
 <?php
-  $titre = "Suivi ...";
+  $titre = "Suivi";
   $support = getenv('SUPPORT_MYSERVICES');
 ?>
 

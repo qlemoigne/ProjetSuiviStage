@@ -13,13 +13,13 @@ class CreatePivotTableValidation extends Migration
      */
     public function up()
     {
-        Schema::create('validation', function (Blueprint $table) {
+        Schema::create('validations', function (Blueprint $table) {
             $table->id();
             $table->boolean('status');
             $table->timestamps();
         });
 
-        Schema::table('validation', function (Blueprint $table) {
+        Schema::table('validations', function (Blueprint $table) {
             $table->unsignedBigInteger('utilisateurs_id');
             $table->foreign('utilisateurs_id')->references('id')->on('utilisateurs')->onDelete('cascade');
             $table->unsignedBigInteger('activites_id');
