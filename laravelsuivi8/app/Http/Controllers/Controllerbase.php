@@ -33,5 +33,9 @@ class Controllerbase extends SuiviController
         $validation = Validation::all()->where('utilisateurs_id','=',$utilisateur->id)->where('activites_id',"=",$activite->id);
         return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite, 'etapes'=> $etapes, 'date'=> $date, 'validation'=>$validation]);
     }
+
+    public function changementEtat(Request $request){
+        console.log("changementEtat");
+    }
     
 }

@@ -25,7 +25,8 @@ $valide_id;
     $echeance = $echeance->format('d/m/Y');
     ?>
     @if($status)
-    <div id="{{$jalon->id}}" onclick="changementEtat({{$valide_id}});">
+    <div id="{{$jalon->id}}" onclick="window.location.assign('{{ route('changementEtat', ['id'=> $valide_id]) }}');">
+    @csrf
         <x-bladewind.timeline
         date="{{$echeance}}"
         label='{{$jalon->libelle}}'
@@ -35,7 +36,8 @@ $valide_id;
         id="{{$jalon->id}}" />
         </div>
     @else
-    <div id="{{$jalon->id}}" onclick="changementEtat({{$valide_id}})">
+    <div id="{{$jalon->id}}" onclick="window.location.assign('{{ route('changementEtat', ['id'=> $valide_id]) }}');">
+    @csrf
     <x-bladewind.timeline
         date="{{$echeance}}"
         label='{{$jalon->libelle}}'
