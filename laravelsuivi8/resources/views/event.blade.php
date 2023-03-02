@@ -6,12 +6,15 @@
 <div class="timeline">
 <?php 
 $status = FALSE;
+$id = 1;
+$valide_id;
 ?>
     @foreach($etapes as $jalon)
         @foreach($validation as $valide)
         @if($valide->etapes_id == $jalon->id)
         <?php 
             $status = $valide->status;
+            $valide_id = $valide->id;
         ?>  
         @endif
         @endforeach
@@ -22,20 +25,27 @@ $status = FALSE;
     $echeance = $echeance->format('d/m/Y');
     ?>
     @if($status)
+    <div id="{{$jalon->id}}" onclick="changementEtat({{$valide_id}});">
         <x-bladewind.timeline
         date="{{$echeance}}"
         label='{{$jalon->libelle}}'
         status="completed"
         stacked="true"
-        color="green" />
+        color="green"
+        id="{{$jalon->id}}" />
+        </div>
     @else
+    <div id="{{$jalon->id}}" onclick="changementEtat({{$valide_id}})">
     <x-bladewind.timeline
         date="{{$echeance}}"
         label='{{$jalon->libelle}}'
         status="pending"
         stacked="true"
         color="red" />
+        </div>
     @endif
+
+
     @endforeach
 
     <x-bladewind.timeline
