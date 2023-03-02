@@ -21,11 +21,12 @@ class DatabaseSeeder extends Seeder
             Etape::class,
             Activite::class,
             Participe::class,
+            ValidationSeeder::class,
             ApplicationSeeder::class,
             MenuSeeder::class,
             TypeUtilisateurSeeder::class,
             UtilisateurSeeder::class,
-            ValidationSeeder::class,
+            
            
         ]);
         
