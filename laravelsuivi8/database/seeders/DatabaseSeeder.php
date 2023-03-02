@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             MenuSeeder::class,
             TypeUtilisateurSeeder::class,
             UtilisateurSeeder::class,
+            ValidationSeeder::class,
            
         ]);
         
