@@ -11,7 +11,7 @@ use App\Models\Validation;
 class Controllerbase extends SuiviController
 {
     public function index(){
-        //$error = IdentificationHelper::identification($this->appli);
+        $error = IdentificationHelper::identification($this->appli);
         if (empty($error)){
             $activites = Activite::all();
             $utilisateur = Utilisateur::find(1);
@@ -35,7 +35,8 @@ class Controllerbase extends SuiviController
     }
 
     public function changementEtat(Request $request){
-        console.log("changementEtat");
+        header('Content-type: application/json');
+        echo json_encode('toto');
     }
     
 }

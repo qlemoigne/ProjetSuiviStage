@@ -26,7 +26,7 @@ $valide_id;
     $echeance = $echeance->format('d/m/Y');
     ?>
     @if($status)
-    <div id="{{$jalon->id}}" onclick="window.location.assign('{{ route('changementEtat', ['id'=> $valide_id]) }}');">
+    <div id="{{$jalon->id}}" class="jalon">
     @csrf
         <x-bladewind.timeline
         date="{{$echeance}}"
@@ -37,7 +37,7 @@ $valide_id;
         id="{{$jalon->id}}" />
         </div>
     @else
-    <div id="{{$jalon->id}}" onclick="window.location.assign('{{ route('changementEtat', ['id'=> $valide_id]) }}');">
+    <div id="{{$jalon->id}}"  class="jalon">
     @csrf
     <x-bladewind.timeline
         date="{{$echeance}}"
@@ -74,4 +74,8 @@ $valide_id;
 </div>
 </div>
 
+@endsection
+@section('pagescripts')
+<script type="text/javascript" src="{{asset('js/suivi.js')}}"></script>
+<script>var baseUrl = <?php echo json_encode(url('/')); ?>;</script>
 @endsection
