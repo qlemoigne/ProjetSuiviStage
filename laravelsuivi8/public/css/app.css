@@ -20,3 +20,13 @@ td, th{
 .h-8{
         margin-right:5px;
 }
+
+.timeline{
+        margin-left: 25%;
+        scale:150%;
+        margin-top:10%;
+}
+.container{
+       display:flex;
+  flex-direction: column;
+}

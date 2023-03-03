@@ -2,7 +2,8 @@
 
 
 @section('content')
-<div id="titre_activite"> {{$activite->resume}} </div>
+<div id="titre_activite"> {{$activite->thematique}} </div>
+<div class="contenu">
 <div class="timeline">
 <?php 
 $status = FALSE;
@@ -57,6 +58,20 @@ $valide_id;
     stacked="true"
     last="true"
     color="red" />
+</div>
+<div id="information">
+
+<div id="info_etape">
+    HEllo
+</div>
+<div id="info_generale">
+    World
+
+
+
+
+</div>
+</div>
 </div>
 
 @endsection
