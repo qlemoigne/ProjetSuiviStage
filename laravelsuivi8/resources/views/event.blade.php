@@ -52,6 +52,7 @@
                         id="{{$valide_id}}"/>
                     </div>
                 @endif
+                @endforeach
 
                 @if($cloture_status)
                     <div id="cloture" class="jalon">
@@ -76,16 +77,6 @@
                         id="jalon_cloture"/>
                     </div>
                 @endif
-            @endforeach
-            <div>
-            <x-bladewind.timeline
-                date="{{$activite->fin}}"
-                label="fin de l'activité"
-                status="pending"
-                stacked="true"
-                last="true"
-                color="red" />
-            </div>
         </div>
         
         <div class="etape-activite">
