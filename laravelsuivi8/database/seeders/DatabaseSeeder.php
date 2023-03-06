@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             Activite::class,
             Participe::class,
             ValidationSeeder::class,
+            ClotureSeeder::class,
             ApplicationSeeder::class,
             MenuSeeder::class,
             TypeUtilisateurSeeder::class,
