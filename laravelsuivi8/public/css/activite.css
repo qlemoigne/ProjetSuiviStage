@@ -1,0 +1,134 @@
+/*-----------------------------------------------------------------------------------------*/
+/* 1 rem = 10 px root*/
+/*titre*/
+.titre-activite,.titre-etape-activite{
+	font-family:inherit;
+	font-size: 2.4rem;
+	text-align: left;
+}
+/* contenu */
+#contenu{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1.2rem;
+    gap: 1.2rem;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    }
+
+    /* Frise */
+    
+.timeline{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 0px;
+    width: 20rem;
+   
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
+    
+    /* Information */
+    
+/* etape frise */
+.z-20{
+
+/* Auto layout */
+
+display: flex;
+justify-content: center;
+align-items: flex-start;
+
+}
+
+
+.h-8{
+    margin-right:0.6rem;
+}
+
+/*info etape*/
+.etape-activite{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    
+    padding: 0px;
+    gap: 1.2rem;
+    border: 0.5rem outset #00b8de;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    outline-offset: 0.6rem;
+
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    }
+.titre-etape-activite{
+    font-style: normal;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+
+}
+.etape-info-generale,.etape-info-detail{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0.6rem;
+    gap: 12px;
+
+    width: 82.5rem;
+    border-radius: 0.6rem;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.validation-etape{
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 1;
+}
+.button-validate{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+    /*--------------------------------------------------------------------------------------*/

@@ -24,6 +24,7 @@ if ($dbType == 'development') {
   <link rel="stylesheet" href="{{asset('assets/bootstrap-datatables/media/css/jquery.dataTables.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/bootstrap-datatables/extensions/FixedHeader/css/fixedHeader.dataTables.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('css/myServices.css')}}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{{asset('css/activite.css')}}" media="screen" />
   @yield('style')
 
   @yield('head')
