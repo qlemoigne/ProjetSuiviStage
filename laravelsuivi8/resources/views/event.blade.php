@@ -11,7 +11,7 @@ $id = 1;
 $valide_id;
 $cloture_status = $cloture->status;
 ?>
-     @foreach($etapes as $jalon)
+    @foreach($etapes as $jalon)
         @foreach($validation as $valide)
         @if($valide->etapes_id == $jalon->id)
         <?php 
@@ -53,7 +53,6 @@ $cloture_status = $cloture->status;
 
 
     @endforeach
-
     @if($cloture_status)
     <div id="cloture" class="jalon">
     <x-bladewind.timeline
