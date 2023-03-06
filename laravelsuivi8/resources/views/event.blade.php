@@ -26,7 +26,7 @@ $valide_id;
     $echeance = $echeance->format('d/m/Y');
     ?>
     @if($status)
-    <div id="{{$jalon->id}}" class="jalon">
+    <div id="{{$valide_id}}" class="jalon">
     @csrf
         <x-bladewind.timeline
         date="{{$echeance}}"
@@ -34,30 +34,34 @@ $valide_id;
         status="completed"
         stacked="true"
         color="green"
-        id="{{$jalon->id}}" />
+        id="{{$valide_id}}" />
         </div>
     @else
-    <div id="{{$jalon->id}}"  class="jalon">
+    <div id="{{$valide_id}}"  class="jalon">
     @csrf
     <x-bladewind.timeline
         date="{{$echeance}}"
         label='{{$jalon->libelle}}'
         status="pending"
         stacked="true"
-        color="red" />
+        color="red" 
+        id="{{$valide_id}}"/>
+        
         </div>
     @endif
 
 
     @endforeach
-
+    <div id="{{$valide_id}}" class="jalon">
     <x-bladewind.timeline
     date="{{$activite->fin}}"
     label="fin de l'activité"
     status="pending"
     stacked="true"
     last="true"
-    color="red" />
+    color="red" 
+    id="{{$valide_id}}"/>
+</div>
 </div>
 <div id="information">
 

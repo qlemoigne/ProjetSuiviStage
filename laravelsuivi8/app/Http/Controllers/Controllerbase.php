@@ -34,9 +34,18 @@ class Controllerbase extends SuiviController
         return view('event', ['menus' => $this->getMenus(), 'activite'=> $activite, 'etapes'=> $etapes, 'date'=> $date, 'validation'=>$validation]);
     }
 
-    public function changementEtat(Request $request){
+    public function changementEtat(){
         header('Content-type: application/json');
-        echo json_encode('toto');
+        echo json_encode($_POST['id']);
+        $validation= Validation::find($_POST['id']);
+        if($validation->status==0){
+            $validation->status=1;
+            $validation->save();
+        }
+        else{
+            $validation->status=0;
+            $validation->save();   
+        }
     }
     
 }
