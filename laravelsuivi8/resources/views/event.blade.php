@@ -9,7 +9,8 @@
                 $status = FALSE;
                 $id = 1;
                 $valide_id;
-                $cloture_status=$cloture->status
+                $cloture_status=$cloture->status;
+                $cloture_id=$cloture->id;
             ?>
 
             @foreach($etapes as $jalon)
@@ -18,6 +19,7 @@
                     <?php 
                         $status = $valide->status;
                         $valide_id = $valide->id;
+                        
                     ?>  
                     @endif
                 @endforeach
@@ -55,7 +57,8 @@
                 @endforeach
 
                 @if($cloture_status)
-                    <div id="cloture" class="jalon">
+                    <div id="{{$cloture_id}}" class="cloture">
+                    @csrf
                         <x-bladewind.timeline
                         date="{{$activite->fin}}"
                         label="fin de l'activité"
@@ -66,7 +69,8 @@
                         id="jalon_cloture"/>
                     </div>
                 @else
-                    <div>
+                    <div id="{{$cloture_id}}" class="cloture">
+                    @csrf
                         <x-bladewind.timeline
                         date="{{$activite->fin}}"
                         label="fin de l'activité"

@@ -49,5 +49,18 @@ class Controllerbase extends SuiviController
             $validation->save();   
         }
     }
+
+    public function cloture(){
+        echo json_encode($_POST['id']);
+        $cloture= Cloture::find($_POST['id']);
+        if($cloture->status==0){
+            $cloture->status=1;
+            $cloture->save();
+        }
+        else{
+            $cloture->status=0;
+            $cloture->save();   
+        }
+    }
     
 }

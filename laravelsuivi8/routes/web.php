@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controllerbase::class, 'index']);
 Route::get('/activite/{id}', [Controllerbase::class, 'activite'])->name('activite');
 Route::post('/activite', [Controllerbase::class, 'changementEtat'])->name('changementEtat');
+Route::post('/cloture', [Controllerbase::class, 'cloture'])->name('changementEtat');
