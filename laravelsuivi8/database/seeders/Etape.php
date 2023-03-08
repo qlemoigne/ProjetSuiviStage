@@ -22,6 +22,7 @@ class Etape extends Seeder
             'importance' => true,
             'types_id'=>1,
             'etapes_id'=>1,
+            'resume'=>'appeler le tuteur interne pour savoir comment ça se passe',
 
         ],
         [
@@ -31,6 +32,7 @@ class Etape extends Seeder
             'importance' => false,
             'types_id'=>1,  
             'etapes_id'=>1, 
+            'resume'=>'corriger le rapport de stage et rentrer la note sur isis'
         ]
     ]);
     }

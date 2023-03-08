@@ -16,6 +16,7 @@ class CreateEtapesTable extends Migration
         Schema::create('etapes', function (Blueprint $table) {
             $table->id();
             $table->string('libelle');
+            $table->string('resume');
             $table->integer('echeance');
             $table->boolean('importance');
             $table->timestamps();
