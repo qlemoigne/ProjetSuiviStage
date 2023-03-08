@@ -1,5 +1,9 @@
 <?php
+
+use App\Http\Controllers\ActiviteController;
+use App\Http\Controllers\changementEtatController;
 use App\Http\Controllers\Controllerbase;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Controllerbase::class, 'index']);
-Route::get('/activite/{id}', [Controllerbase::class, 'activite'])->name('activite');
-Route::post('/activite', [Controllerbase::class, 'changementEtat'])->name('changementEtat');
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/activite/{id}', [ActiviteController::class, 'activite'])->name('activite');
+Route::post('/activite', [changementEtatController::class, 'changementEtat'])->name('changementEtat');
