@@ -15,7 +15,7 @@ class ClotureSeeder extends Seeder
     public function run()
     {
         DB::table('clotures')->insert([[
-            'utilisateurs_id'=> 1,
+            'id'=> 1,
             'appreciation-eleve'=>'',
             'appreciation-tuteur'=>'',
             'fichier-notation'=> '',
@@ -23,6 +23,15 @@ class ClotureSeeder extends Seeder
             'utilisateurs_id'=>1,
             'status'=>TRUE,
             ],
+            [
+                'id'=> 2,
+                'appreciation-eleve'=>'',
+                'appreciation-tuteur'=>'',
+                'fichier-notation'=> '',
+                'activites_id'=>2,
+                'utilisateurs_id'=>1,
+                'status'=>TRUE,
+                ],
         ]);
     }
 }

@@ -25,6 +25,8 @@ class CreateActivitesTable extends Migration
             $table->string('nom_tuteur_externe');
             $table->string('adresse_mail_tuteur_externe');
             $table->string('thematique');
+            $table->string('entreprise');
+            $table->string('resume');
 
           //$table->unsignedBigInteger('types_id');
           //$table->foreign('types_id')->references('id')->on('types');

@@ -22,3 +22,11 @@ td, th{
        display:flex;
   flex-direction: column;
 }
+
+.odd{
+        background-color:#cd1313;
+      }
+      .even{
+        background-color:black;
+      }
+      

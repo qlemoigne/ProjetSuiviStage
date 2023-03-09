@@ -15,10 +15,15 @@ class Type extends Seeder
     public function run()
     {
         DB::table('types')->insert([
+            [
            'id'=> 1,
-            'libelle'=>'stage',
+            'libelle'=>'stage L1',
 
-
+            ],
+            [
+                'id'=> 2,
+                'libelle'=>'stage L3',  
+            ]
         ]);
     }
 }
