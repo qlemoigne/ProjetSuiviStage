@@ -1,0 +1,3 @@
+$( function() {
+    $( "#ensemble-etape" ).accordion();
+  } );

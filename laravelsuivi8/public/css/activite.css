@@ -78,10 +78,10 @@ align-items: flex-start;
     
     flex: none;
     order: 1;
-    flex-grow: 1;
+    flex-grow: 0;
     }
 
-.ensemble-etape{
+#ensemble-etape{
     /* Auto layout */
     
     display: flex;
@@ -100,18 +100,7 @@ align-items: flex-start;
     flex-grow: 1;
     }
 
-
-.titre-etape-info-generale,.etape-info-titre{
-    font-style: normal;
-    font-weight:550;
-    display: flex;
-    align-items: center;
-
-    color: #000000;
-
-
-}
-
+    
 .bloc-info-general{
 
     border: 0.5rem outset #00b8de;
@@ -129,19 +118,15 @@ align-items: flex-start;
 }
 
 .bloc-etape{
+    /*
     border: 0.5rem outset #00b8de;
     border-radius: 1.2rem;
-    padding: 1.2rem;
-    outline-offset: 1rem;
-    outline-offset: 0.6rem;
-    
-    
-    /* Inside auto layout */
-
+    */
     flex: none;
     order: 1;
     flex-grow: 1;
 }
+
 .etape-info-generale,.etape-info-detail{
     /* Auto layout */
 
@@ -151,7 +136,7 @@ align-items: flex-start;
     padding: 0.6rem;
     gap: 12px;
 
-    width: 85rem;
+    width: 80rem;
     border-radius: 0.6rem;
 
     /* Inside auto layout */

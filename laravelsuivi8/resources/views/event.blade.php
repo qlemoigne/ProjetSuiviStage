@@ -86,14 +86,14 @@
         <div class="etape-activite">
 
             <div class="bloc-info-general">
-                <div class="titre-etape-info-generale">Information générale :</div>    
+                <h3>Information générale :<h3>    
                 <div class="etape-info-generale">{{$jalon->libelle}}</div>
             </div>
-            
-            <div class="ensemble-etape">
+
+            <div id="ensemble-etape">
                 @foreach($etapes as $jalon)
+                    <h3>Etape : {{$jalon->libelle}}<h3>
                     <div class="bloc-etape">
-                        <div class="etape-info-titre">Etape : {{$jalon->libelle}}</div>
                         <div class="etape-info-detail">{{$jalon->resume}}</div>
                         <div class="validation-etape"><span class="icon-validate"></span><button class="button-validate">Valider</button></div>
                     </div>

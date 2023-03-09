@@ -22,9 +22,12 @@ if ($dbType == 'development') {
   <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap-theme.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/bootstrap-datatables/media/css/jquery.dataTables.min.css')}}">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" href="{{asset('assets/bootstrap-datatables/extensions/FixedHeader/css/fixedHeader.dataTables.min.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset('css/myServices.css')}}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{{asset('css/activite.css')}}" media="screen" />
+  
   @yield('style')
 
   @yield('head')
@@ -205,6 +208,9 @@ if ($dbType == 'development') {
   <script type="text/javascript" src="{{asset('assets/js/moment.min.js')}}"></script>
   @yield('pagescripts')
   <script type="text/javascript" src="{{asset('js/template.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/event.js')}}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </body>
 
 </html>
