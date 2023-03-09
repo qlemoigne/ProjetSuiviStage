@@ -67,13 +67,11 @@ align-items: flex-start;
     
     display: flex;
     flex-direction: column;
-    
+
     padding: 0px;
     gap: 1.2rem;
-    border: 0.5rem outset #00b8de;
-    border-radius: 1.2rem;
     padding: 1.2rem;
-    outline-offset: 0.6rem;
+
 
     
     /* Inside auto layout */
@@ -82,15 +80,67 @@ align-items: flex-start;
     order: 1;
     flex-grow: 1;
     }
-.titre-etape-activite{
+
+.ensemble-etape{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px;
+    gap: 1.2rem;
+    padding: 1.2rem;
+
+
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    }
+
+
+.titre-etape-info-generale,.etape-info-titre{
     font-style: normal;
-    font-weight: bold;
+    font-weight:550;
     display: flex;
     align-items: center;
 
     color: #000000;
 
 
+}
+
+.bloc-info-general{
+
+    border: 0.5rem outset #00b8de;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    outline-offset: 1rem;
+    outline-offset: 0.6rem;
+    
+    
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.bloc-etape{
+    border: 0.5rem outset #00b8de;
+    border-radius: 1.2rem;
+    padding: 1.2rem;
+    outline-offset: 1rem;
+    outline-offset: 0.6rem;
+    
+    
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 1;
 }
 .etape-info-generale,.etape-info-detail{
     /* Auto layout */
@@ -101,7 +151,7 @@ align-items: flex-start;
     padding: 0.6rem;
     gap: 12px;
 
-    width: 82.5rem;
+    width: 85rem;
     border-radius: 0.6rem;
 
     /* Inside auto layout */

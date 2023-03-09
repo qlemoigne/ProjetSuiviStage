@@ -84,20 +84,25 @@
         </div>
         
         <div class="etape-activite">
-            <div class="etape-info-generale">{{$jalon->libelle}}</div>
-        <?php
-            $nb_etape= 1;
-        ?>
-            @foreach($etapes as $jalon)
-                <div class="bloc-etape">
-                    <div class="etape-info-numero">Information étape {{$nb_etape}}:</div>
-                    <div class="etape-info-detail">{{$jalon->resume}}</div>
-                    <div class="validation-etape"><span class="icon-validate"></span><button class="button-validate">Valider</button></div>
-                </div>
-                <?php
-                    $nb_etape++;
-                ?>
-            @endforeach
+
+            <div class="bloc-info-general">
+                <div class="titre-etape-info-generale">Information générale :</div>    
+                <div class="etape-info-generale">{{$jalon->libelle}}</div>
+            </div>
+            
+            <div class="ensemble-etape">
+                @foreach($etapes as $jalon)
+                    <div class="bloc-etape">
+                        <div class="etape-info-titre">Etape : {{$jalon->libelle}}</div>
+                        <div class="etape-info-detail">{{$jalon->resume}}</div>
+                        <div class="validation-etape"><span class="icon-validate"></span><button class="button-validate">Valider</button></div>
+                    </div>
+                @endforeach
+            </div>
+
+            <div class="deroulant-etapes">
+                
+            </div>
         </div>
     </div>
     
