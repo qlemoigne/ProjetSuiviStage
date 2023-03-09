@@ -25,7 +25,8 @@ class Activite extends Seeder
             'nom_tuteur_externe'=>'jean dupont',
             'thematique'=>'stage de L1',
             'types_id'=>1,
-            'entreprise'=>'SNCF'
+            'entreprise'=>'SNCF',
+            'resume'=>'stage de L1 de Baptiste SENECLAUZE à la SNCF',
             ],
             [
                 'id'=> 2,
@@ -37,7 +38,8 @@ class Activite extends Seeder
                 'nom_tuteur_externe'=>'axel deroulers',
                 'thematique'=>'stage de L3',
                 'types_id'=>2,
-                'entreprise'=>'EDF'   
+                'entreprise'=>'EDF',
+                'resume'=>'stage de L3 de Daniel DI chez EDF'
             ]
 
         ]);
