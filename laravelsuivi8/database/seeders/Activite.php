@@ -15,6 +15,7 @@ class Activite extends Seeder
     public function run()
     {
         DB::table('activites')->insert([
+            [
            'id'=> 1,
             'debut'=>'2023-06-24',
             'fin'=>'2024-05-11',
@@ -24,6 +25,20 @@ class Activite extends Seeder
             'nom_tuteur_externe'=>'jean dupont',
             'thematique'=>'stage de L1',
             'types_id'=>1,
+            'entreprise'=>'SNCF'
+            ],
+            [
+                'id'=> 2,
+                'debut'=>'2023-01-24',
+                'fin'=>'2024-02-11',
+                'adresse_stage'=>'17 rue de la poterie',
+                'numero_tuteur_externe'=>'0647589612',
+                'adresse_mail_tuteur_externe'=>'deroulersaxel@gmail.com',
+                'nom_tuteur_externe'=>'axel deroulers',
+                'thematique'=>'stage de L3',
+                'types_id'=>2,
+                'entreprise'=>'EDF'   
+            ]
 
         ]);
        

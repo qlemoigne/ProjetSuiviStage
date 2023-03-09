@@ -30,7 +30,16 @@ class Utilisateur extends Seeder
             'telephone'=>'0782051968',
             'mail'=>'seneclauzebaptiste@gmail.com',
             'profil'=>'1',
-        ]
+        ],
+        [
+            'id'=> 3,
+             'nom'=>'Di',
+             'prenom'=>'Daniel',
+             'telephone'=>'0648569235',
+             'mail'=>'didaniel@gmail.com',
+             'profil'=>'1',
+ 
+         ]
     ]);
     }
 }

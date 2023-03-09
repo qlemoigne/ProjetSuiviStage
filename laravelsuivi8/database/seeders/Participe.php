@@ -23,6 +23,16 @@ class Participe extends Seeder
             'id'=> 2,
              'utilisateurs_id'=>2,
              'activites_id'=>1,
+        ],
+        [
+            'id'=> 3,
+             'utilisateurs_id'=>1,
+             'activites_id'=>2,
+        ],
+        [
+            'id'=> 4,
+             'utilisateurs_id'=>3,
+             'activites_id'=>2,
          ]
         ]);
        

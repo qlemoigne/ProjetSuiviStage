@@ -14,6 +14,7 @@
             <th scope="col">Type d'activité</th>
             <th scope="col">Nom de l'étudiant  </th>
             <th scope="col">Thématique</th>
+            <th scope="col">Entreprise</th>
             <th scope="col">Nom du tuteur  </th>
             <th scope="col">Début de l'activité</th>
             <th scope="col">Fin de l'activité</th>
@@ -29,13 +30,15 @@
                 <td> 
                 @foreach($activite->utilisateurs as $u)
                     @if($u->id != $utilisateur->id)
-                    <a href="mailto:{{$u->prenom}}.{{$u->nom}}@etu.imt-nord-europe.fr"> 
+                    <a href="mailto:{{$u->prenom}}.{{$u->nom}}@etu.imt-nord-europe.fr">
+                    {{$u->nom}} 
                     {{$u->prenom}}
-                    {{$u->nom}}
+    
                      @endif 
                 @endforeach
                 </td>
                 <td> {{$activite->thematique}} </td>
+                <td> {{$activite->entreprise}} </td>
                 <td><a href="mailto:{{$activite->adresse_mail_tuteur_externe}}">{{$activite->nom_tuteur_externe}}</td>
                 <td>{{$activite->debut}} </td>
                 <td>{{$activite->fin}}</td>
