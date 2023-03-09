@@ -92,7 +92,7 @@
 
             <div id="ensemble-etape">
                 @foreach($etapes as $jalon)
-                    <h3>Etape : {{$jalon->libelle}}<h3>
+                <h3>Etape : {{$jalon->libelle}}<h3>
                     <div class="bloc-etape">
                         <div class="etape-info-detail">{{$jalon->resume}}</div>
                         <div class="validation-etape"><span class="icon-validate"></span><button class="button-validate">Valider</button></div>

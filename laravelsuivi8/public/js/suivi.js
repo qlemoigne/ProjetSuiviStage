@@ -1,4 +1,9 @@
 $(document).ready( function () {
+
+  $( function() {
+    $( "#ensemble-etape" ).accordion();
+  } );
+
     $('#table_accueil').DataTable();
 
     $(document).on("click", ".jalon", function() {
