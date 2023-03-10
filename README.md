@@ -39,3 +39,14 @@ ressources/view : ensemble des vues du projet, la vue template est celle de isis
 
 routes/web.php : liste les routes pour rediriger les requêtes vers les controlleurs
 
+## créer des seeders et mettre à joue la base de donnée
+
+pour créer un nouveau seeder : php artisan make:seed nom du seeder
+
+pour mettre à jour la base de donnée et supprimer les données existantes : php artisan migrate:fresh
+
+pour remplir la base de donnée avec les valeur des seeders : php artisan db:seed (Tous les seeders doivent être referencés dans databaseSeeder en faisant attention à l'ordre pour les clés primaires/secondaires) => va génerer une erreur due à la non prise en charge de la base de donnée de isis : SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '41' for key 'application.PRIMARY' (SQL: insert into `application` (`id_application`, `lib_application`, `lib_version`) values (41, Mon Profil, 1.0), (4, Suivi, 1.0))
+
+pour utiliser qu'un seul seeder spécfique : php artisan db:seed --class=nom du seeder
+
+dans le cas ou un seeder n'est pas detecté : composer dump-autoload --optimize
